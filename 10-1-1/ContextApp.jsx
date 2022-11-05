@@ -1,16 +1,16 @@
 import React from "react";
 
-const ThemeContext = React.createContext('light');
+const ThemeContext = React.createContext('light'); //생성할 컨텍스트의 기본 매개변수를 'light'로 설정
 
 function ContextApp() {
     return (
-        <ThemeContext.Provider value='lavender'>
+        <ThemeContext.Provider value='lavender'> // 컨텍스트의 제공자. props 매개변수를 'lavender'로 변경 ToolBar 컴포넌트에 전달
             <Toolbar />
         </ThemeContext.Provider>
     )
 }
 
-function Toolbar() {
+function Toolbar() { // props value 변경없이 ThemeButton 컴포넌트에 전달
     return (
         <div>
             <ThemeButton />
@@ -18,7 +18,7 @@ function Toolbar() {
     )
 }
 
-function ThemeButton() {
+function ThemeButton() {// props value 변경없이 Button 컴포넌트에 전달
     return (
         <div>
             <Button />
@@ -26,10 +26,10 @@ function ThemeButton() {
     )
 }
 
-function Button () {
+function Button () { 
     return (
         <div>
-            <ThemeContext.Consumer>
+            <ThemeContext.Consumer> // 컨텍스트 구독 요청. Provider의 'lavender' 매개변수를 가져옴
                 {value => ( <div
                                 style={{
                                     margin: 50,
