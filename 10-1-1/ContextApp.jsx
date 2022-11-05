@@ -2,9 +2,9 @@ import React from "react";
 
 const ThemeContext = React.createContext('light'); //생성할 컨텍스트의 기본 매개변수를 'light'로 설정
 
-function ContextApp() {
+function ContextApp() { // 컨텍스트의 제공자. props 매개변수를 'lavender'로 변경 ToolBar 컴포넌트에 전달
     return (
-        <ThemeContext.Provider value='lavender'> // 컨텍스트의 제공자. props 매개변수를 'lavender'로 변경 ToolBar 컴포넌트에 전달
+        <ThemeContext.Provider value='lavender'> 
             <Toolbar />
         </ThemeContext.Provider>
     )
