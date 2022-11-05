@@ -29,7 +29,7 @@ function ThemeButton() {// props value 변경없이 Button 컴포넌트에 전�
 function Button () { 
     return (
         <div>
-            <ThemeContext.Consumer> // 컨텍스트 구독 요청. Provider의 'lavender' 매개변수를 가져옴
+            <ThemeContext.Consumer> {/*컨텍스트 구독 요청. Provider의 'lavender' 매개변수를 가져옴/}
                 {value => ( <div
                                 style={{
                                     margin: 50,
